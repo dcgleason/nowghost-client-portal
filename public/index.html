@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Now Ghost Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <div id="loginView" class="auth-wrap">
+      <div class="auth-card">
+        <p class="eyebrow">The Now Ghost</p>
+        <h1>Client Review Portal</h1>
+        <p class="lead">Clients can review posts, leave comments, and approve content. You can batch content by date and switch between accounts on the admin side.</p>
+        <form id="loginForm" class="auth-form">
+          <label>Email<input type="email" name="email" required placeholder="you@company.com"></label>
+          <label>Password<input type="password" name="password" required placeholder="Password"></label>
+          <button type="submit" class="primary-btn">Log In</button>
+          <p id="loginError" class="error-text"></p>
+        </form>
+        <div class="demo-accounts">
+          <p><strong>Admin:</strong> `admin@thenowghost.com` / `ghostadmin`</p>
+          <p><strong>Client:</strong> `david@bettera.com` / `ghostclient`</p>
+          <p><strong>Client:</strong> `founder@ventureco.com` / `ghostclient`</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="appView" class="app hidden">
+      <aside class="sidebar">
+        <div>
+          <p class="eyebrow">The Now Ghost</p>
+          <h2>Client Portal</h2>
+        </div>
+        <div class="user-card">
+          <span id="userName"></span>
+          <small id="userRole"></small>
+        </div>
+        <div id="adminClientPicker" class="client-picker hidden">
+          <label for="clientSelect">Viewing client</label>
+          <select id="clientSelect"></select>
+        </div>
+        <button id="logoutButton" class="secondary-btn">Log Out</button>
+      </aside>
+
+      <main class="main">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Workspace</p>
+            <h1 id="clientHeading">Posts</h1>
+          </div>
+          <div class="header-actions">
+            <button id="calendarTab" class="tab-btn active">Calendar</button>
+            <button id="postsTab" class="tab-btn">Posts</button>
+          </div>
+        </header>
+
+        <section id="adminComposer" class="composer hidden">
+          <div class="section-title">
+            <h2>Add Post</h2>
+            <p>Paste the post, attach a publish date, and assign its review status.</p>
+          </div>
+          <form id="postForm" class="post-form">
+            <label>
+              Title
+              <input type="text" name="title" required placeholder="Post title">
+            </label>
+            <label>
+              Publish date
+              <input type="date" name="publishDate" required>
+            </label>
+            <label class="full">
+              Post content
+              <textarea name="content" rows="7" required placeholder="Paste the LinkedIn post here..."></textarea>
+            </label>
+            <label>
+              Status
+              <select name="status">
+                <option value="draft">Draft</option>
+                <option value="in_review">In review</option>
+                <option value="approved">Approved</option>
+              </select>
+            </label>
+            <button type="submit" class="primary-btn">Save Post</button>
+          </form>
+        </section>
+
+        <section id="calendarView" class="content-panel">
+          <div class="section-title">
+            <h2>Publishing Calendar</h2>
+            <p>Review scheduled posts in a monthly view.</p>
+          </div>
+          <div id="calendarGrid" class="calendar-grid"></div>
+        </section>
+
+        <section id="postsView" class="content-panel hidden">
+          <div class="section-title">
+            <h2>Post Queue</h2>
+            <p>Open any post to copy, comment, or approve it.</p>
+          </div>
+          <div id="postsList" class="posts-list"></div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

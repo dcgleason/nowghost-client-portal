@@ -1,0 +1,108 @@
+{
+  "users": [
+    {
+      "id": "user-admin",
+      "email": "admin@thenowghost.com",
+      "password": "ghostadmin",
+      "name": "Danny Gleason",
+      "role": "admin",
+      "clientId": null
+    },
+    {
+      "id": "user-bettera",
+      "email": "david@bettera.com",
+      "password": "ghostclient",
+      "name": "David Holstein",
+      "role": "client",
+      "clientId": "client-bettera"
+    },
+    {
+      "id": "user-venture",
+      "email": "founder@ventureco.com",
+      "password": "ghostclient",
+      "name": "Alex Carter",
+      "role": "client",
+      "clientId": "client-ventureco"
+    }
+  ],
+  "clients": [
+    {
+      "id": "client-bettera",
+      "name": "Bettera",
+      "contactName": "David Holstein",
+      "vertical": "ServiceNow Partner"
+    },
+    {
+      "id": "client-ventureco",
+      "name": "VentureCo",
+      "contactName": "Alex Carter",
+      "vertical": "VC-Backed Startup"
+    }
+  ],
+  "posts": [
+    {
+      "id": "post-1",
+      "clientId": "client-bettera",
+      "title": "Why ServiceNow Partners Need Founder Signal",
+      "content": "Most ServiceNow firms sound interchangeable online. The firms that win trust faster are the ones whose founders show how they think before the call ever happens.\n\nThat means clearer opinions on workflow transformation, sharper stories from the field, and a point of view buyers can remember.",
+      "publishDate": "2026-03-20",
+      "status": "approved",
+      "createdAt": "2026-03-18T09:00:00.000Z",
+      "updatedAt": "2026-03-18T15:27:49.430Z",
+      "comments": [
+        {
+          "id": "comment-1",
+          "authorName": "Danny Gleason",
+          "role": "admin",
+          "body": "Drafted for your March content batch. Curious if you want this more partner-side or buyer-side.",
+          "createdAt": "2026-03-18T09:30:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "post-2",
+      "clientId": "client-bettera",
+      "title": "The Best ServiceNow Content is Specific",
+      "content": "Generic thought leadership does not move enterprise buyers. Specificity does.\n\nSpecific lessons from delivery. Specific mistakes. Specific customer pain. Specific tradeoffs. That is what makes founder-led LinkedIn work.",
+      "publishDate": "2026-03-24",
+      "status": "approved",
+      "createdAt": "2026-03-18T10:00:00.000Z",
+      "updatedAt": "2026-03-18T12:00:00.000Z",
+      "comments": [
+        {
+          "id": "comment-2",
+          "authorName": "David Holstein",
+          "role": "client",
+          "body": "Approved. Good to post next week.",
+          "createdAt": "2026-03-18T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "post-3",
+      "clientId": "client-ventureco",
+      "title": "Why Founder-Led Content Still Matters in AI",
+      "content": "In AI, products move fast and features get copied even faster. Founder-led content is how you show the market you understand the deeper problem, not just the latest launch.\n\nThat trust compounds long before a demo request shows up.",
+      "publishDate": "2026-03-21",
+      "status": "in_review",
+      "createdAt": "2026-03-18T08:30:00.000Z",
+      "updatedAt": "2026-03-18T08:30:00.000Z",
+      "comments": [
+        {
+          "id": "comment-3",
+          "authorName": "Danny Gleason",
+          "role": "admin",
+          "body": "Queued this for your thought-leadership slot next week.",
+          "createdAt": "2026-03-18T08:35:00.000Z"
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "token": "6fee039455687c745913f954c714c3784c413d2a9004f1fd",
+      "userId": "user-admin",
+      "createdAt": "2026-03-18T15:28:02.104Z"
+    }
+  ]
+}
