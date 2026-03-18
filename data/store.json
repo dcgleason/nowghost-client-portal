@@ -23,6 +23,14 @@
       "name": "Alex Carter",
       "role": "client",
       "clientId": "client-ventureco"
+    },
+    {
+      "id": "user-powerglide-aman",
+      "email": "aman.ghei@powerglide.io",
+      "password": "aman.ghei123",
+      "name": "Aman",
+      "role": "client",
+      "clientId": "client-powerglide"
     }
   ],
   "clients": [
@@ -37,6 +45,12 @@
       "name": "VentureCo",
       "contactName": "Alex Carter",
       "vertical": "VC-Backed Startup"
+    },
+    {
+      "id": "client-powerglide",
+      "name": "PowerGlide",
+      "contactName": "Aman",
+      "vertical": "LinkedIn Ghostwriting Client"
     }
   ],
   "posts": [

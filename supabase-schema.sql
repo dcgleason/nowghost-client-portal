@@ -41,13 +41,15 @@ create index if not exists idx_portal_comments_post_id on public.portal_comments
 
 insert into public.portal_clients (id, name, contact_name, vertical) values
   ('client-bettera', 'Bettera', 'David Holstein', 'ServiceNow Partner'),
-  ('client-ventureco', 'VentureCo', 'Alex Carter', 'VC-Backed Startup')
+  ('client-ventureco', 'VentureCo', 'Alex Carter', 'VC-Backed Startup'),
+  ('client-powerglide', 'PowerGlide', 'Aman', 'LinkedIn Ghostwriting Client')
 on conflict (id) do nothing;
 
 insert into public.portal_users (id, email, password_salt, password_hash, name, role, client_id) values
   ('user-admin', 'admin@thenowghost.com', 'salt-admin', 'ff44263acdf8f7ec4b924553fea49875e603a40cf3547bc7193186d0610da8c9', 'Danny Gleason', 'admin', null),
   ('user-bettera', 'david@bettera.com', 'salt-bettera', '86018da066fc64379a7404c0dd10860d6373056e6485fc4787f0a0c393756eca', 'David Holstein', 'client', 'client-bettera'),
-  ('user-venture', 'founder@ventureco.com', 'salt-venture', '525324bd2929dbdaed404d5785693eb6a0172117a616f13a3302f596e04a7497', 'Alex Carter', 'client', 'client-ventureco')
+  ('user-venture', 'founder@ventureco.com', 'salt-venture', '525324bd2929dbdaed404d5785693eb6a0172117a616f13a3302f596e04a7497', 'Alex Carter', 'client', 'client-ventureco'),
+  ('user-powerglide-aman', 'aman.ghei@powerglide.io', 'salt-powerglide-aman', '6842803269549265132253d0af3613ad8a971278abab69ef48d5728fc2fd13f8', 'Aman', 'client', 'client-powerglide')
 on conflict (id) do nothing;
 
 insert into public.portal_posts (id, client_id, title, content, publish_date, status, created_at, updated_at) values
