@@ -31,6 +31,14 @@
       "name": "Aman",
       "role": "client",
       "clientId": "client-powerglide"
+    },
+    {
+      "id": "user-astra-yannis",
+      "email": "yannis.sahli@astra-conseil.com",
+      "password": "sahli123",
+      "name": "Yannis SAHLI",
+      "role": "client",
+      "clientId": "client-astra"
     }
   ],
   "clients": [
@@ -51,6 +59,12 @@
       "name": "PowerGlide",
       "contactName": "Aman",
       "vertical": "LinkedIn Ghostwriting Client"
+    },
+    {
+      "id": "client-astra",
+      "name": "Astra Partners",
+      "contactName": "Yannis SAHLI",
+      "vertical": "ServiceNow Partner"
     }
   ],
   "posts": [
